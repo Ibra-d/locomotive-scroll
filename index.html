@@ -1,0 +1,48 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <title>LOCOMOTIVE SCROLL</title>
+    <link rel="stylesheet" href="style.css" />
+    <link
+      rel="stylesheet"
+      href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
+    />
+  </head>
+  <body>
+    <div class="container" data-scroll-container>
+      <section class="section_01" data-scroll-section>
+        <span data-scroll>M</span>
+        <span data-scroll>O</span>
+        <span data-scroll>M</span>
+        <span data-scroll>O</span>
+      </section>
+      <section class="section_02" data-scroll-section>
+        <span data-scroll data-scroll-speed="4">T</span>
+        <span data-scroll data-scroll-speed="3">E</span>
+        <span data-scroll data-scroll-speed="1">S</span>
+        <span data-scroll data-scroll-speed="2">T</span>
+      </section>
+      <section class="section_03" data-scroll-section>
+        <span data-scroll>H</span>
+        <span data-scroll>O</span>
+        <span data-scroll>R</span>
+        <span data-scroll>I</span>
+        <span data-scroll>Z</span>
+        <span data-scroll>O</span>
+        <span data-scroll>N</span>
+        <span data-scroll>T</span>
+        <span data-scroll>A</span>
+        <span data-scroll>L</span>
+      </section>
+    </div>
+  </body>
+  <script src="app.js"></script>
+  <script src="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.0.6/dist/locomotive-scroll.min.js"></script>
+  <script>
+    const scroll = new LocomotiveScroll({
+      el: document.querySelector("[data-scroll-container]"),
+      smooth: true,
+      multiplier: 1 / 5,
+    });
+  </script>
+</html>

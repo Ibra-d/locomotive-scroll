@@ -1,0 +1,39 @@
+body {
+  margin: 0;
+  padding: 0;
+  font-family: monospace;
+}
+
+/* width */
+::-webkit-scrollbar {
+  display: none;
+}
+
+.container {
+  height: max-content;
+  overflow: hidden;
+}
+
+section {
+  height: 100vh;
+  width: 100%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  font-size: 3em;
+  letter-spacing: 1em;
+}
+
+/* section span {} */
+
+.section_01 {
+  background-color: #f2ffca;
+}
+
+.section_02 {
+  background-color: #baffa8;
+}
+
+.section_03 {
+  background-color: #fff0a6;
+}

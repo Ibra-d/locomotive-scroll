@@ -3,12 +3,15 @@
   <head>
     <title>LOCOMOTIVE SCROLL</title>
     <link rel="stylesheet" href="style.css" />
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.11.1/gsap.min.js"></script>
     <link
       rel="stylesheet"
       href="https://cdn.jsdelivr.net/npm/locomotive-scroll@4.1.4/dist/locomotive-scroll.css"
     />
   </head>
   <body>
+    <div class="anim anim_1"></div>
+    <div class="anim anim_2"></div>
     <div class="container" data-scroll-container>
       <section class="section_01" data-scroll-section>
         <span data-scroll>M</span>
@@ -17,10 +20,16 @@
         <span data-scroll>O</span>
       </section>
       <section class="section_02" data-scroll-section>
-        <span data-scroll data-scroll-speed="4">T</span>
-        <span data-scroll data-scroll-speed="3">E</span>
-        <span data-scroll data-scroll-speed="1">S</span>
-        <span data-scroll data-scroll-speed="2">T</span>
+        <span data-scroll data-scroll-speed="6" data-scroll-delay="0.18"
+          >T</span
+        >
+        <span data-scroll data-scroll-speed="6" data-scroll-delay="0.14"
+          >E</span
+        >
+        <span data-scroll data-scroll-speed="6" data-scroll-delay="0.12"
+          >S</span
+        >
+        <span data-scroll data-scroll-speed="6" data-scroll-delay="0.1">T</span>
       </section>
       <section class="section_03" data-scroll-section>
         <span data-scroll>H</span>
@@ -46,6 +55,31 @@
       smartphone: {
         smooth: true,
       },
+    });
+
+    gsap.from(".anim_1", 1, {
+      height: "100vh",
+      width: "100%",
+      "background-color": "#f0f0f0",
+      delay: 1,
+      ease: Expo.easeOut,
+    });
+
+    gsap.from(".anim_2", 2, {
+      height: "100vh",
+      width: "100%",
+      "background-color": "#000",
+      delay: 3,
+      ease: Expo.easeOut,
+    });
+
+    gsap.to(".anim_2", 1, {
+      height: "100vh",
+      width: "100%",
+      transform: "translateX(100%)",
+      "background-color": "#f0f0f0",
+      delay: 2,
+      ease: Expo.easeOut,
     });
   </script>
 </html>
